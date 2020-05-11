@@ -1,0 +1,19 @@
+#################################
+## Author: Fernando Melone     ##
+## Email: fern.melone@imply.io ##
+#################################
+
+#cloud-config
+package_update: true
+package_upgrade: true
+
+packages:          
+ - openjdk-8-jre-headless
+ - python
+
+runcmd:
+ - curl -LO http://static.imply.io/release/imply-3.3.2.1.tar.gz
+ - tar -xzf imply-3.3.2.1.tar.gz -C /home/ubuntu
+ - chown -R ubuntu:ubuntu /home/ubuntu
+ - cd imply-3.3.2.1
+ - /usr/bin/screen -dmS imply /home/ubuntu/imply-3.3.2.1/bin/supervise -c /home/ubuntu/imply-3.3.2.1/conf/supervise/quickstart.conf
