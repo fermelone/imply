@@ -12,8 +12,8 @@ packages:
  - python
 
 runcmd:
- - curl -LO http://static.imply.io/release/imply-3.3.2.1.tar.gz
- - tar -xzf imply-3.3.2.1.tar.gz -C /home/ubuntu
+ - curl -LO http://static.imply.io/release/imply-2021.11.tar.gz
+ - tar -xzf imply-2021.11.tar.gz -C /home/ubuntu
  - chown -R ubuntu:ubuntu /home/ubuntu
- - cd imply-3.3.2.1
- - /usr/bin/screen -dmS imply /home/ubuntu/imply-3.3.2.1/bin/supervise -c /home/ubuntu/imply-3.3.2.1/conf/supervise/quickstart.conf
+ - cd imply-2021.11
+ - /usr/bin/screen -dmS imply /home/ubuntu/imply-2021.11/bin/supervise -c /home/ubuntu/imply-2021.11/conf/supervise/quickstart.conf
